@@ -20,32 +20,33 @@ import dimod
 # TODO:  Add code here to import your Traveling Salesman QUBO generator
 
 
-## ------- provided distance matrix -------
-distance_matrix = [
-        [0, 2230, 1631, 1566, 1346, 1352, 1204],
-        [2230, 0, 845, 707, 1001, 947, 1484],
-        [1631, 845, 0, 627, 773, 424, 644],
-        [1566, 707, 627, 0, 302, 341, 1027],
-        [1346, 1001, 773, 302, 0, 368, 916],
-        [1352, 947, 424, 341, 368, 0, 702],
-        [1204, 1484, 644, 1027, 916, 702, 0],
-    ]
+
+def get_token():
+    '''Return your personal access token'''
+
+    # TODO: Enter your token here
+
+
+    return token
 
 
 # TODO:  Add code here to define your QUBO dictionary
-def get_qubo(G):
+def get_qubo(G, lagrange, n):
     """Returns a dictionary representing a QUBO"""
 
-    # Add QUBO construction here
+    # TODO:  Add QUBO construction here
 
-    return Q
+    offset = 2 * n * lagrange
+
+    return Q, offset
 
 
 # TODO:  Add code here to define your sampler
-def get_sampler():
+def get_sampler(token):
     """Returns a sampler"""
 
-    # Add sampler here
+    # TODO: Enter your sampler here
+
 
     return sampler
 
@@ -53,22 +54,41 @@ def get_sampler():
 ## ------- Main program -------
 if __name__ == "__main__":
 
+    lagrange = 4000
+    n = 7
     G = nx.Graph()
-    j = 0
-    for row in distance_matrix:
-        for k, item in enumerate(row):
-            if j < k:
-                G.add_edge(j, k, weight=item)
-        j += 1
-
-    Q = get_qubo(G)
-    sampler = get_sampler()
-    bqm = dimod.BinaryQuadraticModel.from_qubo(Q)
+    G.add_weighted_edges_from([
+        (0, 1, 2230),
+        (0, 2, 1631),
+        (0, 3, 1566),
+        (0, 4, 1346),
+        (0, 5, 1352),
+        (0, 6, 1204),
+        (1, 2, 845),
+        (1, 3, 707),
+        (1, 4, 1001),
+        (1, 5, 947),
+        (1, 6, 1484),
+        (2, 3, 627),
+        (2, 4, 773),
+        (2, 5, 424),
+        (2, 6, 644),
+	(3, 4, 302),
+	(3, 5, 341),
+	(3, 6, 1027),
+	(4, 5, 368),
+	(4, 6, 916),
+	(5, 6, 702)
+    ])
+    Q, offset = get_qubo(G, lagrange, n)
+    token = get_token()
+    sampler = get_sampler(token)
+    bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
     response = sampler.sample(bqm)
 
     start = None
     sample = response.first.sample
-    n = len(distance_matrix)
+    cost = response.first.energy
     route = [None] * n
 
     for (city, time), val in sample.items():
@@ -81,8 +101,5 @@ if __name__ == "__main__":
         route = route[-idx:] + route[:-idx]
 
     if None not in route:
-        cost = 0
-        for i, j in zip(route, route[1:] + route[:1]):
-            cost += distance_matrix[i][j]
         print(route)
         print(cost)
