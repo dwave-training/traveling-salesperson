@@ -85,7 +85,7 @@ if __name__ == "__main__":
     token = get_token()
     sampler = get_sampler(token)
     bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
-    response = sampler.sample(bqm)
+    response = sampler.sample(bqm, label="Training - TSP")
 
     start = None
     sample = response.first.sample
