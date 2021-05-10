@@ -42,7 +42,7 @@ def get_qubo(G, lagrange, n):
 
 
 # TODO:  Add code here to define your sampler
-def get_sampler(token):
+def get_sampler():
     """Returns a sampler"""
 
     # TODO: Enter your sampler here
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     ])
     Q, offset = get_qubo(G, lagrange, n)
     token = get_token()
-    sampler = get_sampler(token)
+    sampler = get_sampler()
     bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
     response = sampler.sample(bqm, label="Training - TSP")
 
