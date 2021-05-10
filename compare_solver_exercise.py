@@ -20,16 +20,6 @@ import dimod
 # TODO:  Add code here to import your Traveling Salesman QUBO generator
 
 
-
-def get_token():
-    '''Return your personal access token'''
-
-    # TODO: Enter your token here
-
-
-    return token
-
-
 # TODO:  Add code here to define your QUBO dictionary
 def get_qubo(G, lagrange, n):
     """Returns a dictionary representing a QUBO"""
@@ -42,7 +32,7 @@ def get_qubo(G, lagrange, n):
 
 
 # TODO:  Add code here to define your sampler
-def get_sampler(token):
+def get_sampler():
     """Returns a sampler"""
 
     # TODO: Enter your sampler here
@@ -81,8 +71,7 @@ if __name__ == "__main__":
 	(5, 6, 702)
     ])
     Q, offset = get_qubo(G, lagrange, n)
-    token = get_token()
-    sampler = get_sampler(token)
+    sampler = get_sampler()
     bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
     response = sampler.sample(bqm)
 
