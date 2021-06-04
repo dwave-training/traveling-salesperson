@@ -27,3 +27,7 @@ type ``python compare_solver_exercise.py``. You have
 successfully completed the exercise when you are able to see a result in
 miles under 10000. (The alternate solvers do not necessarily find the
 ground state)
+
+## License
+
+Released under the Apache License 2.0. See [LICENSE](LICENSE) file.
