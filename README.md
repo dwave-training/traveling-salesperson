@@ -1,14 +1,14 @@
 # Traveling Salesman
 
-This exercise contains two student exercises which illustrate the use of 
+This exercise contains two exercises which illustrate the use of 
 the Hybrid Solver Service (HSS) and one alternative sampler.
 
 ## Exercise 1
 
-The program ``hss_exercise.py`` is an exercise for students.
+The program ``hss_exercise.py`` is the first exercise.
 It is a 7-city Traveling Salesman problem.
-The students need to call the Hybrid Solver Service, call the Traveling
-Salesman QUBO generator from ``dwave_networkx``, and enter their own access 
+First, you need to call the Hybrid Solver Service, call the Traveling
+Salesman QUBO generator from ``dwave_networkx``, and then enter your access 
 token.
 To run your program from the command-line, type ``python hss_exercise.py``. 
 You have successfully
@@ -17,10 +17,10 @@ minimum distance solution for the 7-city Traveling Salesman problem.)
 
 ## Exercise 2 
 
-The program ``compare_solver_exercise.py`` is an exercise for students.
+The program ``compare_solver_exercise.py`` is the second exercise.
 It is a 7-city Traveling Salesman problem.
-The students need to call an alternative sampler - they can choose 
-``SimulatedAnnealingSampler``, or ``TabuSampler``. They also need to call the
+First, you need to call an alternative sampler - you can choose 
+``SimulatedAnnealingSampler``, or ``TabuSampler``. You also need to call the
 Traveling Salesman QUBO generator from ``dwave_networkx``.
 To run your program from the command-line, 
 type ``python compare_solver_exercise.py``. You have 
