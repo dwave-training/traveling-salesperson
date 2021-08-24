@@ -22,12 +22,10 @@ import dimod
 
 
 def get_token():
-    '''Return your personal access token'''
-
+    '''Returns personal access token. Only required if submitting to autograder.'''
+    
     # TODO: Enter your token here
-
-
-    return token
+    return 'YOUR-TOKEN-HERE'
 
 
 # TODO:  Add code here to define your QUBO dictionary
