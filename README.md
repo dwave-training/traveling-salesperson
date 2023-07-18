@@ -4,33 +4,29 @@
 
 # Traveling Salesman
 
-This exercise contains two exercises which illustrate the use of 
-the Hybrid Solver Service (HSS) and one alternative sampler.
+A traveling salesperson has a list of seven cities to visit exactly once during their route. The salesperson wants to take the shortest route possible.
+
+This problem contains two exercises which illustrate the difference between the hybrid and classical solvers.
 
 ## Exercise 1
 
-The program ``hss_exercise.py`` is the first exercise.
-It is a 7-city Traveling Salesman problem.
-First, you need to call the Hybrid Solver Service, call the Traveling
-Salesman QUBO generator from ``dwave_networkx``, and then enter your access 
-token.
-To run your program from the command-line, type ``python hss_exercise.py``. 
-You have successfully
-completed the exercise when you are able to see a result of 5422 miles (the
-minimum distance solution for the 7-city Traveling Salesman problem.)
+The program ``hss_exercise.py`` is the first exercise.You will need to:
+ 	1. Call the hybrid solver
+	2. Call the traveling salesman QUBO generator from ``dwave_networkx``
+	3. Enter your access token
+	4. Fill in the ``get-qubo`` function
+	5. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
+
+ Notes: 
+• Don't forget to import the packages where the sampler and traveling salesman QUBO generator lives.
+• You may find the Ocean documentation useful.
 
 ## Exercise 2 
 
-The program ``compare_solver_exercise.py`` is the second exercise.
-It is a 7-city Traveling Salesman problem.
-First, you need to call an alternative sampler - you can choose 
-``SimulatedAnnealingSampler``, or ``TabuSampler``. You also need to call the
-Traveling Salesman QUBO generator from ``dwave_networkx``.
-To run your program from the command-line, 
-type ``python compare_solver_exercise.py``. You have 
-successfully completed the exercise when you are able to see a result in
-miles under 10000. (The alternate solvers do not necessarily find the
-ground state)
+The second exercise is ``compare_solver_exercise.py``. This file is identical to the hss_exercise.py, except you will call a classical solver instead of a hybrid solver. 
+There are two things you should modify from what you did in exercise 1: 
+	1. Call an alternative sampler (choose ``SimulatedAnnealingSampler``) 
+	2. Set up your sampler in the ``get_sampler`` function to run the simulated annealing algorithm. 
 
 ## License
 
