@@ -12,25 +12,24 @@ This problem contains two exercises which illustrate the difference between the 
 
 The program ``hss_exercise.py`` is the first exercise.You will need to:
 
- 	1. Call the hybrid solver
-	2. Call the traveling salesman QUBO generator from ``dwave_networkx``
-	3. Enter your access token
-	4. Fill in the ``get-qubo`` function
-	5. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
+ 1. Call the hybrid solver
+ 2. Call the traveling salesman QUBO generator from ``dwave_networkx``
+ 3. Enter your access token
+ 4. Fill in the ``get-qubo`` function
+ 5. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
 
  Notes: 
  
-• Don't forget to import the packages where the sampler and traveling salesman QUBO generator lives.
-
-• You may find the [Ocean documentation](https://docs.ocean.dwavesys.com/en/stable/) useful.
+1. Don't forget to import the packages where the sampler and traveling salesman QUBO generator lives.
+2. You may find the [Ocean documentation](https://docs.ocean.dwavesys.com/en/stable/) useful.
 
 ## Exercise 2 
 
 The second exercise is ``compare_solver_exercise.py``. This file is identical to the hss_exercise.py, except you will call a classical solver instead of a hybrid solver. 
 There are two things you should modify from what you did in exercise 1: 
 
-	1. Call an alternative sampler (choose ``SimulatedAnnealingSampler``) 
-	2. Set up your sampler in the ``get_sampler`` function to run the simulated annealing algorithm. 
+1. Call an alternative sampler (choose ``SimulatedAnnealingSampler``)
+2. Set up your sampler in the ``get_sampler`` function to run the simulated annealing algorithm. 
 
 ## License
 
