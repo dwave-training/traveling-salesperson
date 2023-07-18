@@ -15,9 +15,9 @@
 ## ------- import packages -------
 import networkx as nx
 import dimod
-# TODO:  Add code here to import your sampler
+# TODO:  Import your sampler
 
-# TODO:  Add code here to import your Traveling Salesman QUBO generator
+# TODO:  Import your Traveling Salesman QUBO generator
 
 
 
@@ -28,7 +28,6 @@ def get_token():
     return 'YOUR-TOKEN-HERE'
 
 
-# TODO:  Add code here to define your QUBO dictionary
 def get_qubo(G, lagrange, n):
     """Returns a dictionary representing a QUBO"""
 
@@ -39,7 +38,6 @@ def get_qubo(G, lagrange, n):
     return Q, offset
 
 
-# TODO:  Add code here to define your sampler
 def get_sampler():
     """Returns a sampler"""
 
