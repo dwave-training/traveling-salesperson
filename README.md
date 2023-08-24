@@ -2,7 +2,7 @@
 	https://cdn-assets.cloud.dwavesys.com/shared/latest/badges/leapide.svg)](
 	https://ide.dwavesys.io/#https://github.com/dwave-training/traveling-salesman)
 
-# Traveling Salesman
+# Traveling Salesperson
 
 A traveling salesperson has a list of seven cities to visit exactly once during their route. The salesperson wants to take the shortest route possible.
 
@@ -13,14 +13,14 @@ This problem contains two exercises which illustrate the difference between the 
 The program ``hss_exercise.py`` is the first exercise.You will need to:
 
  1. Call the hybrid solver
- 2. Call the traveling salesman QUBO generator from ``dwave_networkx``
+ 2. Call the traveling salesperson QUBO generator from ``dwave_networkx``
  3. Enter your access token
  4. Fill in the ``get-qubo`` function
  5. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
 
  Notes: 
  
-1. Don't forget to import the packages where the sampler and traveling salesman QUBO generator lives.
+1. Don't forget to import the packages where the sampler and traveling salesperson QUBO generator lives.
 2. You may find the [Ocean documentation](https://docs.ocean.dwavesys.com/en/stable/) useful.
 
 ## Exercise 2 
