@@ -17,7 +17,7 @@ import networkx as nx
 import dimod
 # TODO:  Import your sampler
 
-# TODO:  Import your Traveling Salesman QUBO generator
+# TODO:  Import your Traveling Salesperson QUBO generator
 
 
 def get_qubo(G, lagrange, n):
