@@ -20,14 +20,6 @@ import dimod
 # TODO:  Import your Traveling Salesperson QUBO generator
 
 
-
-def get_token():
-    '''Returns personal access token. Only required if submitting to autograder.'''
-    
-    # TODO: Enter your token here
-    return 'YOUR-TOKEN-HERE'
-
-
 def get_qubo(G, lagrange, n):
     """Returns a dictionary representing a QUBO"""
 
@@ -78,7 +70,6 @@ if __name__ == "__main__":
 	(5, 6, 702)
     ])
     Q, offset = get_qubo(G, lagrange, n)
-    token = get_token()
     sampler = get_sampler()
     bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
     response = sampler.sample(bqm, label="Training - TSP")
