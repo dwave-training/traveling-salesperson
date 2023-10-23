@@ -10,7 +10,7 @@ This problem contains two exercises which illustrate the difference between the 
 
 ## Exercise 1
 
-The program ``hss_exercise.py`` is the first exercise.You will need to:
+The program ``hss_exercise.py`` is the first exercise. You will need to:
 
  1. Call the hybrid solver
  2. Call the traveling salesperson QUBO generator from ``dwave_networkx``
