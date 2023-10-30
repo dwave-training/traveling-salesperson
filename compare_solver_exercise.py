@@ -71,7 +71,7 @@ if __name__ == "__main__":
     Q, offset = get_qubo(G, lagrange, n)
     sampler = get_sampler()
     bqm = dimod.BinaryQuadraticModel.from_qubo(Q, offset=offset)
-    response = sampler.sample(bqm)
+    response = sampler.sample(bqm, label="Training - TSP")
 
     start = None
     sample = response.first.sample

@@ -1,6 +1,3 @@
-[![Open in Leap IDE](	
-	https://cdn-assets.cloud.dwavesys.com/shared/latest/badges/leapide.svg)](
-	https://ide.dwavesys.io/#https://github.com/dwave-training/traveling-salesperson)
 
 # Traveling Salesperson
 
@@ -14,9 +11,8 @@ The program ``hss_exercise.py`` is the first exercise. You will need to:
 
  1. Call the hybrid solver
  2. Call the traveling salesperson QUBO generator from ``dwave_networkx``
- 3. Enter your access token
- 4. Fill in the ``get-qubo`` function
- 5. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
+ 3. Fill in the ``get-qubo`` function
+ 4. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
 
  Notes: 
  
