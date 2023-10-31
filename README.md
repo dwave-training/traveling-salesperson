@@ -1,3 +1,7 @@
+[![Open in GitHub Codespaces](
+  https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-333?logo=github)](
+  https://codespaces.new/dwave-training/traveling-salesperson?quickstart=1)
+
 
 # Traveling Salesperson
 
