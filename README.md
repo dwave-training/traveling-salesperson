@@ -21,7 +21,7 @@ The program ``hss_exercise.py`` is the first exercise. You will need to:
  Notes: 
  
 1. Don't forget to import the packages where the sampler and traveling salesperson QUBO generator lives.
-2. You may find the [Ocean documentation](https://docs.ocean.dwavesys.com/en/stable/) useful.
+2. You may find the [Ocean documentation](https://docs.dwavequantum.com/en/latest/ocean/index.html) useful.
 
 ## Exercise 2 
 
