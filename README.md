@@ -15,7 +15,7 @@ The program ``hss_exercise.py`` is the first exercise. You will need to:
 
  1. Call the hybrid solver
  2. Call the traveling salesperson BQM generator from ``dimod.generators``
- 3. Fill in the ``get-bqm`` function
+ 3. Fill in the ``get_bqm`` function
  4. Setup your sampler in the ``get_sampler`` function to run on the hybrid sampler
 
  Notes: 
