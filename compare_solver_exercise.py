@@ -22,7 +22,7 @@ import networkx as nx
 
 
 def get_bqm(G, lagrange):
-    """Returns a BQM model for the Traveling Salesperson problem"""
+    """Returns a BQM for the Traveling Salesperson problem"""
 
     # TODO:  Generate the BQM
 
